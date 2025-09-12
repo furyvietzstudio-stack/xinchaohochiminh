@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết Sân Golf</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+
+<!-- Menu -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">신짜오 호치민</div>
+      <ul id="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="golf.html">Golf</a></li>
+        <li><a href="apartment.html" class="active">Apartment</a></li>
+        <li><a href="villa.html">Villa</a></li>
+        <li><a href="car-rental.html">Car Rental</a></li>
+        <li><a href="home.html">Other Services</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+  </header>
+
+
+  <!-- Banner nhỏ -->
+  <section class="small-banner">
+    <img src="picter/bg_golf.webp" alt="Golf Detail">
+    <h1>빈펄 레만 골프장</h1>
+  </section>
+
+  <!-- Layout chính -->
+  <section class="golf-detail">
+    <div class="detail-container">
+
+      <!-- Slide ảnh -->
+      <div class="gallery">
+        <div class="gallery-main" id="gallery-main">
+          <img src="picter/vinpearl_cuchi/1624253548-328440095-combo-golf-2-ngay-1-em-vinpearl-golf-h-i-phong.jpg" alt="Ảnh 1" id="main-image">
+        </div>
+        <div class="gallery-thumbs">
+          <img src="picter/vinpearl_cuchi/1624253548-328440095-combo-golf-2-ngay-1-em-vinpearl-golf-h-i-phong.jpg" alt="Ảnh 1" onclick="showImage(this)">
+          <img src="picter/vinpearl_cuchi/hinh-anh-san-golf-cu-chi-3.jpeg" alt="Ảnh 2" onclick="showImage(this)">
+          <img src="picter/vinpearl_cuchi/hinh-anh-san-golf-vingroup-cu-chi-2.jpg" alt="Ảnh 3" onclick="showImage(this)">
+          <img src="picter/vinpearl_cuchi/san-golf-cu-chi-1.jpg" alt="Ảnh 4" onclick="showImage(this)">
+          <img src="picter/vinpearl_cuchi/san-golf-cu-chi-2.jpg" alt="Ảnh 5" onclick="showImage(this)">
+          <img src="picter/vinpearl_cuchi/san-golf-cu-chi-7_1740539805.jpg" alt="Ảnh 6" onclick="showImage(this)">
+          <img src="picter/vinpearl_cuchi/san-golf-vinpearl-folf-leman-cu-chi.jpg" alt="Ảnh 7" onclick="showImage(this)">
+          <img src="picter/vinpearl_cuchi/San-golf-Vinpearl-Golf-LéMan.png" alt="Ảnh 8" onclick="showImage(this)">
+          <img src="picter/vinpearl_cuchi/vietnam-golf-country-club-2_2.jpeg" alt="Ảnh 9" onclick="showImage(this)">
+        </div>
+      </div>
+
+      <div class="detail-content">
+        <!-- Thông tin (50%) -->
+<div class="golf-detail-info-box">
+  <h2 class="golf-detail-title">🏌️‍♂️ 빈펄 레만 골프장 (Vinpearl Leman Golf)</h2>
+
+  <p>
+    빈펄 레만 골프장은 호치민 외곽 <strong>구찌(구찌 지역)</strong>에 위치한 최신 프리미엄 골프 코스입니다.
+    자연 친화적인 설계와 현대적인 시설을 갖춘 이곳은
+    골퍼들에게 새로운 차원의 라운딩 경험을 선사할 예정입니다.
+  </p>
+
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">✨ 오픈 안내</h3>
+    <p class="golf-detail-note">
+      <strong>정식 오픈 예정일:</strong> 2023년 10월 4일
+    </p>
+    <p>
+      베트남 남부에서 가장 주목받는 신규 골프 명소로 자리잡을 전망입니다.
+    </p>
+  </div>
+</div>
+
+
+        <!-- Các sân golf khác (20%) -->
+        <div class="other-golf">
+          <h3>Các sân golf khác</h3>
+          <div class="other-list">
+            <a href="golf-detail.html?id=vungtau" class="other-card">Golf Ho Chi Minh</a>
+            <a href="golf-detail.html?id=binhduong" class="other-card">Golf Phan Thiet</a>
+            <a href="golf-detail.html?id=dongnai" class="other-card">Golf Dong Nai</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup full screen -->
+  <div id="popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img class="popup-content" id="popup-img">
+  </div>
+
+<!-- Liên hệ -->
+  <section class="contact">
+    <div class="container">
+      <h2>저희에게 문의하세요</h2>
+      <div class="contact-container">
+        <div class="qr-code">
+          <img src="picter/QR.png" alt="QR KakaoTalk">
+        </div>
+        <div class="contact-info">
+          <p>KakaoTalk: <strong><a href="http://pf.kakao.com/_FXwxkG/chat">신짜오 호치민</strong></p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="https://youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+            <a href="https://open.kakao.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111496.png" alt="KakaoTalk"></a>
+            <a href="https://x.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">XINCHAOHOCHIMINH</div>
+    <p>© 2025 XINCHAOHOCHIMINH. All rights reserved.</p>
+  </footer>
+
+  <script>
+  // ======================
+  // Menu toggle
+  // ======================
+  const toggleBtn = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener("click", () => menu.classList.toggle("active"));
+  }
+
+  // ======================
+  // Gallery logic
+  // ======================
+  let currentIndex = 0;
+  const mainImg = document.getElementById("main-image");
+  const thumbs = document.querySelectorAll(".gallery-thumbs img");
+  let slideInterval;
+
+  // Hiển thị ảnh được chọn
+  function showImage(el) {
+    mainImg.src = el.src;
+    currentIndex = Array.from(thumbs).indexOf(el);
+
+    // reset highlight
+    thumbs.forEach(t => t.classList.remove("active"));
+    el.classList.add("active");
+
+    // Mobile: scroll thumbnail về giữa
+    if (window.innerWidth <= 768) {
+      el.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+  }
+
+  // Auto slide 5s
+  function autoSlide() {
+    slideInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % thumbs.length;
+      const nextThumb = thumbs[currentIndex];
+
+      mainImg.src = nextThumb.src;
+      thumbs.forEach(t => t.classList.remove("active"));
+      nextThumb.classList.add("active");
+
+      if (window.innerWidth <= 768) {
+        nextThumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
+    }, 5000);
+  }
+  autoSlide();
+
+  // Gắn sự kiện click cho từng thumbnail
+  thumbs.forEach(thumb => {
+    thumb.addEventListener("click", () => {
+      clearInterval(slideInterval); // dừng slide tạm khi người dùng click
+      showImage(thumb);
+      autoSlide(); // khởi động lại auto slide
+    });
+  });
+
+  // ======================
+  // Popup
+  // ======================
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popup-img");
+
+  mainImg.onclick = function() {
+    popup.style.display = "block";
+    popupImg.src = this.src;
+  }
+
+  function closePopup() {
+    popup.style.display = "none";
+  }
+
+  // Đóng popup khi click nền đen
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) closePopup();
+  });
+</script>
+
+
+</body>
+</html>

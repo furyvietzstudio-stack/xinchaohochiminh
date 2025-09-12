@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết Sân Golf</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+
+<!-- Menu -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">신짜오 호치민</div>
+      <ul id="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="golf.html">Golf</a></li>
+        <li><a href="apartment.html" class="active">Apartment</a></li>
+        <li><a href="villa.html">Villa</a></li>
+        <li><a href="car-rental.html">Car Rental</a></li>
+        <li><a href="home.html">Other Services</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+  </header>
+
+
+  <!-- Banner nhỏ -->
+  <section class="small-banner">
+    <img src="picter/bg_golf.webp" alt="Golf Detail">
+    <h1>Golf</h1>
+  </section>
+
+  <!-- Layout chính -->
+  <section class="golf-detail">
+    <div class="detail-container">
+
+      <!-- Slide ảnh -->
+      <div class="gallery">
+        <div class="gallery-main" id="gallery-main">
+          <img src="picter/taelwangJeongsan/thum.jpg" alt="Ảnh 1" id="main-image">
+        </div>
+        <div class="gallery-thumbs">
+          <img src="picter/taelwangJeongsan/1620811674-73826561-tour-goft-k-t-h-p-ngh-d-ng-laguna-l-ng-co-san-golf-t-t-nh-t-vi-t-nam.jpg" alt="Ảnh 1" onclick="showImage(this)">
+          <img src="picter/taelwangJeongsan/DSC06837.jpg" alt="Ảnh 2" onclick="showImage(this)">
+          <img src="picter/taelwangJeongsan/DSC07020.jpg" alt="Ảnh 3" onclick="showImage(this)">
+          <img src="picter/taelwangJeongsan/san-golf-dong-nai-1.jpg" alt="Ảnh 4" onclick="showImage(this)">
+          <img src="picter/taelwangJeongsan/jeongsan.webp" alt="Ảnh 5" onclick="showImage(this)">
+          <img src="picter/taelwangJeongsan/maxresdefault.jpg" alt="Ảnh 6" onclick="showImage(this)">
+          <img src="picter/taelwangJeongsan/moi-tuan-mot-bat-dong-san-golf-dong-nai-nguoi-tien-phong-22-.4721.png" alt="Ảnh 7" onclick="showImage(this)">
+          <img src="picter/taelwangJeongsan/Royal-Island-Golf-1.jpg" alt="Ảnh 8" onclick="showImage(this)">
+          <img src="picter/taelwangJeongsan/san-golf-dong-nai-1.jpg" alt="Ảnh 9" onclick="showImage(this)">
+        </div>
+      </div>
+
+      <div class="detail-content">
+        <!-- Thông tin (50%) -->
+<div class="golf-detail-info-box">
+  <h2 class="golf-detail-title">🏌️‍♂️ 태광정산CC / Taekwang Jeongsan Golf Club</h2>
+
+  <p>
+    태광정산CC는 동나이강 인근의 섬 지역에 위치해,<br>
+    자연과 어우러진 독특한 코스 레이아웃과 쾌적한 라운딩 환경으로 사랑받는 골프장입니다.
+  </p>
+
+  <!-- 평일 (월요일) -->
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">🗓️ 평일 (월요일)</h3>
+    <ul class="golf-detail-time-list">
+      <li><strong>오전 티타임:</strong> 06:00 ~ 08:00</li>
+      <li><strong>정오 티타임:</strong> 11:15 ~ 13:00</li>
+    </ul>
+    <p class="golf-detail-price">➡️ 요금: 2,000,000 VND</p>
+  </div>
+
+  <!-- 평일 (화요일 ~ 금요일) -->
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">🗓️ 평일 (화요일 ~ 금요일)</h3>
+    <ul class="golf-detail-time-list">
+      <li><strong>오전 티타임:</strong> 06:00 ~ 08:00</li>
+      <li><strong>정오 티타임:</strong> 11:15 ~ 13:00</li>
+    </ul>
+    <p class="golf-detail-price">➡️ 요금: 2,200,000 VND</p>
+  </div>
+
+  <!-- 주말 및 명절 -->
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">🗓️ 주말 (토·일) 및 명절</h3>
+    <ul class="golf-detail-time-list">
+      <li><strong>11:00 이전:</strong> 3,100,000 VND</li>
+      <li><strong>11:00 이후:</strong> 2,800,000 VND</li>
+    </ul>
+  </div>
+
+  <p class="golf-detail-note">
+    ✨ 태광정산CC는 다양한 시간대와 합리적인 요금제를 통해,<br>
+    골퍼들에게 최적의 선택과 특별한 라운딩 경험을 제공합니다.
+  </p>
+</div>
+
+
+
+
+        <!-- Các sân golf khác (20%) -->
+        <div class="other-golf">
+          <h3>Các sân golf khác</h3>
+          <div class="other-list">
+            <a href="golf-detail.html?id=vungtau" class="other-card">Golf Ho Chi Minh</a>
+            <a href="golf-detail.html?id=binhduong" class="other-card">Golf Phan Thiet</a>
+            <a href="golf-detail.html?id=dongnai" class="other-card">Golf Dong Nai</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup full screen -->
+  <div id="popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img class="popup-content" id="popup-img">
+  </div>
+
+<!-- Liên hệ -->
+  <section class="contact">
+    <div class="container">
+      <h2>저희에게 문의하세요</h2>
+      <div class="contact-container">
+        <div class="qr-code">
+          <img src="picter/QR.png" alt="QR KakaoTalk">
+        </div>
+        <div class="contact-info">
+          <p>KakaoTalk: <strong><a href="http://pf.kakao.com/_FXwxkG/chat">신짜오 호치민</strong></p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="https://youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+            <a href="https://open.kakao.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111496.png" alt="KakaoTalk"></a>
+            <a href="https://x.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">XINCHAOHOCHIMINH</div>
+    <p>© 2025 XINCHAOHOCHIMINH. All rights reserved.</p>
+  </footer>
+
+  <script>
+  // ======================
+  // Menu toggle
+  // ======================
+  const toggleBtn = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener("click", () => menu.classList.toggle("active"));
+  }
+
+  // ======================
+  // Gallery logic
+  // ======================
+  let currentIndex = 0;
+  const mainImg = document.getElementById("main-image");
+  const thumbs = document.querySelectorAll(".gallery-thumbs img");
+  let slideInterval;
+
+  // Hiển thị ảnh được chọn
+  function showImage(el) {
+    mainImg.src = el.src;
+    currentIndex = Array.from(thumbs).indexOf(el);
+
+    // reset highlight
+    thumbs.forEach(t => t.classList.remove("active"));
+    el.classList.add("active");
+
+    // Mobile: scroll thumbnail về giữa
+    if (window.innerWidth <= 768) {
+      el.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+  }
+
+  // Auto slide 5s
+  function autoSlide() {
+    slideInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % thumbs.length;
+      const nextThumb = thumbs[currentIndex];
+
+      mainImg.src = nextThumb.src;
+      thumbs.forEach(t => t.classList.remove("active"));
+      nextThumb.classList.add("active");
+
+      if (window.innerWidth <= 768) {
+        nextThumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
+    }, 5000);
+  }
+  autoSlide();
+
+  // Gắn sự kiện click cho từng thumbnail
+  thumbs.forEach(thumb => {
+    thumb.addEventListener("click", () => {
+      clearInterval(slideInterval); // dừng slide tạm khi người dùng click
+      showImage(thumb);
+      autoSlide(); // khởi động lại auto slide
+    });
+  });
+
+  // ======================
+  // Popup
+  // ======================
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popup-img");
+
+  mainImg.onclick = function() {
+    popup.style.display = "block";
+    popupImg.src = this.src;
+  }
+
+  function closePopup() {
+    popup.style.display = "none";
+  }
+
+  // Đóng popup khi click nền đen
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) closePopup();
+  });
+</script>
+
+
+</body>
+</html>

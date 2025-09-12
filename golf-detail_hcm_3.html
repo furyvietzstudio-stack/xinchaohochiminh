@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết Sân Golf</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+
+<!-- Menu -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">신짜오 호치민</div>
+      <ul id="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="golf.html">Golf</a></li>
+        <li><a href="apartment.html" class="active">Apartment</a></li>
+        <li><a href="villa.html">Villa</a></li>
+        <li><a href="car-rental.html">Car Rental</a></li>
+        <li><a href="home.html">Other Services</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+  </header>
+
+
+  <!-- Banner nhỏ -->
+  <section class="small-banner">
+    <img src="picter/bg_golf.webp" alt="Golf Detail">
+    <h1>트윈도브cc</h1>
+  </section>
+
+  <!-- Layout chính -->
+  <section class="golf-detail">
+    <div class="detail-container">
+
+      <!-- Slide ảnh -->
+      <div class="gallery">
+        <div class="gallery-main" id="gallery-main">
+          <img src="picter/Twin Doves/14441868071371.jpg" alt="Ảnh 1" id="main-image">
+        </div>
+        <div class="gallery-thumbs">
+          <img src="picter/Twin Doves/_DSC6717.jpg" alt="Ảnh 1" onclick="showImage(this)">
+          <img src="picter/Twin Doves/14441868071371.jpg" alt="Ảnh 2" onclick="showImage(this)">
+          <img src="picter/Twin Doves/_DSC6827.jpg" alt="Ảnh 3" onclick="showImage(this)">
+          <img src="picter/Twin Doves/Anh4-1f2ea.webp" alt="Ảnh 4" onclick="showImage(this)">
+          <img src="picter/Twin Doves/LONG-THANH-GOLF.jpg" alt="Ảnh 5" onclick="showImage(this)">
+          <img src="picter/Twin Doves/maxresdefault.jpg" alt="Ảnh 6" onclick="showImage(this)">
+          <img src="picter/Twin Doves/pictures_library_38070_20191219150832_7096.jpg" alt="Ảnh 7" onclick="showImage(this)">
+          <img src="picter/Twin Doves/twin-doves-golf-dulichxanh.jpg" alt="Ảnh 8" onclick="showImage(this)">
+          <img src="picter/Twin Doves/Twin-Doves-golf-1.jpg" alt="Ảnh 9" onclick="showImage(this)">
+        </div>
+      </div>
+
+      <div class="detail-content">
+        <!-- Thông tin (50%) -->
+<div class="golf-detail-info-box">
+  <h2 class="golf-detail-title">🏌️‍♂️트윈도브cc / Twin Doves CC </h2>
+
+  <p>
+    호치민과 인접한 투득CC는 자연과 조화를 이루는 명품 골프 코스로,<br>
+    요일과 시간대별로 세분화된 요금제를 운영하고 있습니다.<br>
+    이를 통해 초보부터 숙련된 골퍼까지, 누구나 자신의 일정과 스타일에 맞는 라운딩을 선택할 수 있습니다.
+  </p>
+
+  <!-- 월요일 -->
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">✅ 월요일 (T2)</h3>
+    <p>월요일은 주중의 시작을 알리며, 비교적 한적한 분위기 속에서 라운딩을 즐기기에 이상적입니다.</p>
+    <ul class="golf-detail-time-list">
+      <li><strong>이른 아침 라운드:</strong> 05:53 ~ 08:06 — 맑은 공기와 함께 여유로운 샷</li>
+      <li><strong>정오 라운드:</strong> 11:20 ~ 13:33 — 따스한 햇살 아래 안정적인 플레이</li>
+    </ul>
+    <p class="golf-detail-price">➡️ 요금: 2,300,000 VND</p>
+  </div>
+
+  <!-- 화요일 ~ 수요일 -->
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">✅ 화요일 ~ 수요일 (T3 ~ T4)</h3>
+    <p>
+      주중 중반에 해당하는 화·수요일은 업무 중 잠시 벗어나 라운딩을 즐기기에 좋습니다.<br>
+      요일에 따라 소폭의 요금 차이가 있습니다.
+    </p>
+    <p class="golf-detail-price">➡️ 요금: 2,300,000 ~ 2,400,000 VND</p>
+  </div>
+
+  <!-- 목요일 ~ 금요일 -->
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">✅ 목요일 ~ 금요일 (T5 ~ T6)</h3>
+    <p>
+      주중 후반부에는 코스 컨디션이 안정적으로 유지되며,<br>
+      비즈니스 라운드나 주말 전 워밍업 라운드로 적합합니다.
+    </p>
+    <p class="golf-detail-price">➡️ 요금: 2,500,000 VND</p>
+  </div>
+
+  <!-- 토요일 -->
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">✅ 토요일 (T7)</h3>
+    <p>
+      주말의 시작인 토요일은 가장 활기가 넘치는 날입니다.<br>
+      다양한 골퍼들이 모여드는 만큼 경쟁력 있는 프라임 타임 요금이 적용됩니다.
+    </p>
+    <p class="golf-detail-price">➡️ 요금: 3,300,000 VND</p>
+  </div>
+
+  <!-- 일요일 -->
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">✅ 일요일 (CN)</h3>
+    <p>일요일은 주말 중에서도 가장 인기가 높은 날로, 시간대에 따라 요금이 달리 적용됩니다.</p>
+    <ul class="golf-detail-time-list">
+      <li><strong>아침 라운드:</strong> 3,800,000 VND — 상쾌한 바닷바람과 함께 최고의 컨디션</li>
+      <li><strong>오후 라운드:</strong> 3,300,000 VND — 여유롭고 편안한 라운딩 추천</li>
+    </ul>
+  </div>
+
+  <p class="golf-detail-note">
+    ✨ 투득CC는 이렇게 요일별·시간대별 맞춤 요금제를 통해 각기 다른 매력과 플레이 경험을 제공합니다.<br>
+    골퍼 여러분은 언제 방문하시든, 최상의 만족과 즐거운 라운딩을 보장받으실 수 있습니다.
+  </p>
+</div>
+
+
+
+        <!-- Các sân golf khác (20%) -->
+        <div class="other-golf">
+          <h3>Các sân golf khác</h3>
+          <div class="other-list">
+            <a href="golf-detail.html?id=vungtau" class="other-card">Golf Ho Chi Minh</a>
+            <a href="golf-detail.html?id=binhduong" class="other-card">Golf Phan Thiet</a>
+            <a href="golf-detail.html?id=dongnai" class="other-card">Golf Dong Nai</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup full screen -->
+  <div id="popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img class="popup-content" id="popup-img">
+  </div>
+
+<!-- Liên hệ -->
+  <section class="contact">
+    <div class="container">
+      <h2>저희에게 문의하세요</h2>
+      <div class="contact-container">
+        <div class="qr-code">
+          <img src="picter/QR.png" alt="QR KakaoTalk">
+        </div>
+        <div class="contact-info">
+          <p>KakaoTalk: <strong><a href="http://pf.kakao.com/_FXwxkG/chat">신짜오 호치민</strong></p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="https://youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+            <a href="https://open.kakao.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111496.png" alt="KakaoTalk"></a>
+            <a href="https://x.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">XINCHAOHOCHIMINH</div>
+    <p>© 2025 XINCHAOHOCHIMINH. All rights reserved.</p>
+  </footer>
+
+  <script>
+  // ======================
+  // Menu toggle
+  // ======================
+  const toggleBtn = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener("click", () => menu.classList.toggle("active"));
+  }
+
+  // ======================
+  // Gallery logic
+  // ======================
+  let currentIndex = 0;
+  const mainImg = document.getElementById("main-image");
+  const thumbs = document.querySelectorAll(".gallery-thumbs img");
+  let slideInterval;
+
+  // Hiển thị ảnh được chọn
+  function showImage(el) {
+    mainImg.src = el.src;
+    currentIndex = Array.from(thumbs).indexOf(el);
+
+    // reset highlight
+    thumbs.forEach(t => t.classList.remove("active"));
+    el.classList.add("active");
+
+    // Mobile: scroll thumbnail về giữa
+    if (window.innerWidth <= 768) {
+      el.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+  }
+
+  // Auto slide 5s
+  function autoSlide() {
+    slideInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % thumbs.length;
+      const nextThumb = thumbs[currentIndex];
+
+      mainImg.src = nextThumb.src;
+      thumbs.forEach(t => t.classList.remove("active"));
+      nextThumb.classList.add("active");
+
+      if (window.innerWidth <= 768) {
+        nextThumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
+    }, 5000);
+  }
+  autoSlide();
+
+  // Gắn sự kiện click cho từng thumbnail
+  thumbs.forEach(thumb => {
+    thumb.addEventListener("click", () => {
+      clearInterval(slideInterval); // dừng slide tạm khi người dùng click
+      showImage(thumb);
+      autoSlide(); // khởi động lại auto slide
+    });
+  });
+
+  // ======================
+  // Popup
+  // ======================
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popup-img");
+
+  mainImg.onclick = function() {
+    popup.style.display = "block";
+    popupImg.src = this.src;
+  }
+
+  function closePopup() {
+    popup.style.display = "none";
+  }
+
+  // Đóng popup khi click nền đen
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) closePopup();
+  });
+</script>
+
+
+</body>
+</html>

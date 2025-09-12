@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental - Xin Chào Hồ Chí Minh</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+
+<!-- Menu -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">신짜오 호치민</div>
+      <ul id="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="golf.html">Golf</a></li>
+        <li><a href="apartment.html" class="active">Apartment</a></li>
+        <li><a href="villa.html">Villa</a></li>
+        <li><a href="car-rental.html">Car Rental</a></li>
+        <li><a href="home.html">Other Services</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+  </header>
+
+
+  <!-- Banner nhỏ -->
+  <section class="small-banner" style="background-image: url(picter/bg_car.webp);">
+    <h1>관광 차량 렌트</h1>
+  </section>
+
+  <!-- Pricing -->
+<section class="car-rental-pricing container">
+  <h2>1️⃣ 편도 노선</h2>
+  <p class="desc">💰 해당 요금은 A → B 구간의 1회 편도 기준입니다.</p>
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>노선</th>
+        <th>4인승 차량</th>
+        <th>7인승 차량</th>
+        <th>16인승 차량</th>
+        <th>9인승 리무진</th>
+        <th>11인승 리무진</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="노선">Sài Gòn → Mũi Né</td>
+        <td data-label="4인승 차량">1.200.000</td>
+        <td data-label="7인승 차량">1.300.000</td>
+        <td data-label="16인승 차량">2.200.000</td>
+        <td data-label="9인승 리무진">2.800.000</td>
+        <td data-label="11인승 리무진">3.500.000</td>
+      </tr>
+      <tr>
+        <td data-label="노선">Sài Gòn → Vũng Tàu</td>
+        <td data-label="4인승 차량">1.000.000</td>
+        <td data-label="7인승 차량">1.100.000</td>
+        <td data-label="16인승 차량">2.000.000</td>
+        <td data-label="9인승 리무진">2.500.000</td>
+        <td data-label="11인승 리무진">3.000.000</td>
+      </tr>
+      <tr>
+        <td data-label="노선">Sài Gòn → Nha Trang</td>
+        <td data-label="4인승 차량">2.500.000</td>
+        <td data-label="7인승 차량">2.600.000</td>
+        <td data-label="16인승 차량">4.400.000</td>
+        <td data-label="9인승 리무진">5.500.000</td>
+        <td data-label="11인승 리무진">6.700.000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2️⃣ 당일 왕복 노선입니다.</h2>
+  <p class="desc">해당 요금은 동일한 날짜에 출발지와 목적지를 왕복하는 차량 렌트에 적용됩니다.</p>
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>노선</th>
+        <th>4인승 차량</th>
+        <th>7인승 차량</th>
+        <th>16인승 차량</th>
+        <th>9인승 리무진</th>
+        <th>11인승 리무진</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="노선">Sài Gòn – Mũi Né – Sài Gòn</td>
+        <td data-label="4인승 차량">2.400.000</td>
+        <td data-label="7인승 차량">2.500.000</td>
+        <td data-label="16인승 차량">3.700.000</td>
+        <td data-label="9인승 리무진">4.400.000</td>
+        <td data-label="11인승 리무진">5.500.000</td>
+      </tr>
+      <tr>
+        <td data-label="노선">Sài Gòn – Vũng Tàu – Sài Gòn</td>
+        <td data-label="4인승 차량">1.800.000</td>
+        <td data-label="7인승 차량">2.000.000</td>
+        <td data-label="16인승 차량">2.500.000</td>
+        <td data-label="9인승 리무진">3.200.000</td>
+        <td data-label="11인승 리무진">4.400.000</td>
+      </tr>
+      <tr>
+        <td data-label="노선">Mũi Né – Nha Trang – Mũi Né</td>
+        <td data-label="4인승 차량">2.400.000</td>
+        <td data-label="7인승 차량">2.500.000</td>
+        <td data-label="16인승 차량">3.700.000</td>
+        <td data-label="9인승 리무진">4.400.000</td>
+        <td data-label="11인승 리무진">5.500.000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3️⃣ 맞춤 일정 (요청에 따라 유연하게 조정 가능)</h2>
+  <p class="desc">고객은 원하는 시간에 따라 예약하거나, 편도 또는 왕복의 정해진 노선을 선택하여 예약할 수 있습니다.</p>
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>일정</th>
+        <th>4인승 차량</th>
+        <th>7인승 차량</th>
+        <th>16인승 차량</th>
+        <th>카니발 차량</th>
+        <th>리무진 차량</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="일정">호치민 시내 10시간</td>
+        <td data-label="4인승 차량">1.500.000</td>
+        <td data-label="7인승 차량">1.600.000</td>
+        <td data-label="16인승 차량">2.200.000</td>
+        <td data-label="카니발 차량">2.500.000</td>
+        <td data-label="리무진 차량">2.700.000</td>
+      </tr>
+      <tr>
+        <td data-label="일정">동나이 골프장 (왕복)</td>
+        <td data-label="4인승 차량">1.500.000</td>
+        <td data-label="7인승 차량">1.600.000</td>
+        <td data-label="Xe 16 chỗ">2.200.000</td>
+        <td data-label="카니발 차량">2.500.000</td>
+        <td data-label="리무진 차량">2.700.000</td>
+      </tr>
+      <tr>
+        <td data-label="일정">호치민 → 호짬 (편도)</td>
+        <td data-label="4인승 차량">1.050.000</td>
+        <td data-label="7인승 차량">1.150.000</td>
+        <td data-label="16인승 차량">2.000.000</td>
+        <td data-label="카니발 차량">2.200.000</td>
+        <td data-label="리무진 차량">2.300.000</td>
+      </tr>
+      <tr>
+        <td data-label="일정">호치민 → 무이네 (편도)</td>
+        <td data-label="4인승 차량">1.400.000</td>
+        <td data-label="7인승 차량">1.500.000</td>
+        <td data-label="16인승 차량">2.200.000</td>
+        <td data-label="카니발 차량">2.200.000</td>
+        <td data-label="리무진 차량">2.600.000</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+<section class="car-rental-gallery">
+  <!-- Hàng chạy sang trái -->
+  <div class="marquee-row left">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <img src="picter/THUEXE/z6938815214335_4816f8f3ef5731012143eb656c56a9db.jpg" alt="Car 1">
+        <img src="picter/THUEXE/z6938815215396_d6bd9b11cf3a7d416f49f2f74fa24d8b.jpg" alt="Car 2">
+        <img src="picter/THUEXE/z6938820011497_5ddea6c11055fb6a66e45562e0c061ba.jpg" alt="Car 3">
+        <img src="picter/THUEXE/z6938820025264_d3dd3d9e376fc9e70ac860512c69fba5.jpg" alt="Car 4">
+      </div>
+      <div class="marquee-group">
+        <img src="picter/THUEXE/z6938820025497_9c5c4317951a981941ca5080ed67a647.jpg" alt="Car 1">
+        <img src="picter/THUEXE/z6938820037529_180bf8f7efc1ba2a620d2903165f7f72.jpg" alt="Car 2">
+        <img src="picter/THUEXE/z6938820042622_296b81c7af65da4a39b94ae7ac077720.jpg" alt="Car 3">
+        <img src="picter/THUEXE/z6938825894320_c1f051ddaba16d5027135a327c38aca4.jpg" alt="Car 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Hàng chạy sang phải -->
+  <div class="marquee-row right">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <img src="picter/THUEXE/z6938831895860_dbcf2ad26917623ae88c48e0abf80fa5.jpg" alt="Car 5">
+        <img src="picter/THUEXE/z6938831890373_2835366165e735dc4c1403180c41bdbc.jpg" alt="Car 6">
+        <img src="picter/THUEXE/z6938831888289_433604e013dae801d26ad8da86d57a4f.jpg" alt="Car 7">
+        <img src="picter/THUEXE/z6938831878506_c59d4a74bbb1731da3fc6d9cbb7e5ae0.jpg" alt="Car 8">
+      </div>
+      <div class="marquee-group">
+        <img src="picter/THUEXE/z6938825906813_211c81c4f85b39ade4681de59708299c.jpg" alt="Car 5">
+        <img src="picter/THUEXE/z6938825894320_c1f051ddaba16d5027135a327c38aca4.jpg" alt="Car 6">
+        <img src="picter/THUEXE/z6938820042622_296b81c7af65da4a39b94ae7ac077720.jpg" alt="Car 7">
+        <img src="picter/THUEXE/z6938820037529_180bf8f7efc1ba2a620d2903165f7f72.jpg" alt="Car 8">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Liên hệ -->
+  <section class="contact">
+    <div class="container">
+      <h2>저희에게 문의하세요</h2>
+      <div class="contact-container">
+        <div class="qr-code">
+          <img src="picter/QR.png" alt="QR KakaoTalk">
+        </div>
+        <div class="contact-info">
+          <p>KakaoTalk: <strong><a href="http://pf.kakao.com/_FXwxkG/chat">신짜오 호치민</strong></p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="https://youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+            <a href="https://open.kakao.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111496.png" alt="KakaoTalk"></a>
+            <a href="https://x.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">XINCHAOHOCHIMINH</div>
+    <p>© 2025 XINCHAOHOCHIMINH. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

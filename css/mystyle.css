@@ -1,0 +1,1367 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  
+}
+
+/* Colors */
+:root {
+  --blue: #003366;  /* xanh dương đậm */
+  --yellow: #f4c400; 
+  --white: #ffffff;
+  --max-width: 1344px; /* giới hạn nội dung */
+}
+
+/* Navbar (full width, sticky + responsive) */
+.navbar {
+  position: fixed;   /* luôn bám trên cùng */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--blue);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Menu mặc định (desktop) */
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+.navbar ul li {
+  margin-left: 20px;
+}
+.navbar ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar ul li a:hover {
+  color: var(--yellow);
+}
+
+.home_services_1 {
+    margin-bottom: 30px;
+}
+/* Nút toggle menu mobile */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: var(--blue);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .navbar ul li {
+    margin: 15px 0;
+    text-align: right;
+    margin-right: 20px;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+}
+
+
+/* Banner (full width) */
+.banner img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* Wrapper cho các section trong 1344px */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Services Section */
+.services {
+  padding: 40px 0;
+  text-align: center;
+}
+.services .container {
+  padding-top: 20px;
+}
+.service-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+}
+.service-slider::-webkit-scrollbar { display: none; }
+.service-slider.dragging { cursor: grabbing; }
+.service-card {
+  flex: 0 0 calc(33.33% - 20px);
+  scroll-snap-align: start;
+  background: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  pointer-events: none;
+}
+.service-card h3 {
+  padding: 10px;
+  background: var(--blue);
+  color: var(--white);
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive cho service */
+@media (max-width: 992px) {
+  .service-card { flex: 0 0 calc(50% - 20px); }
+}
+@media (max-width: 576px) {
+  .service-card { flex: 0 0 100%; }
+}
+
+/* About */
+.about { 
+  padding: 40px 0; 
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.about-image {
+  flex: 2; /* 2 phần = 2/3 */
+}
+.about-text {
+  flex: 1; /* 1 phần = 1/3 */
+}
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+.about-text h2 {
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+.about-text p {
+  line-height: 1.6;
+}
+
+/* Responsive: mobile -> stack dọc */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-image, .about-text {
+    flex: unset;
+    width: 100%;
+  }
+}
+
+/* News */
+.news {
+  padding: 40px 0;
+  text-align: center;
+}
+.news-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+  padding: 20px 0;
+}
+.news-slider::-webkit-scrollbar { display: none; }
+.news-slider.dragging { cursor: grabbing; }
+.news-card {
+  flex: 0 0 calc(33.33% - 20px);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+  scroll-snap-align: start;
+  background: var(--white);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  pointer-events: none;
+}
+.news-card h3 { padding: 10px; color: var(--blue); }
+.news-card p { padding: 0 10px 10px; }
+.news-card a {
+  display: inline-block;
+  margin: 10px;
+  color: var(--yellow);
+  text-decoration: none;
+  font-weight: bold;
+}
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive cho news */
+@media (max-width: 992px) {
+  .news-card { flex: 0 0 calc(50% - 20px); }
+}
+@media (max-width: 576px) {
+  .news-card { flex: 0 0 100%; }
+}
+
+
+/* Contact */
+.contact {
+  padding: 40px 0;
+  text-align: center;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+.qr-code img {
+  border: 5px solid var(--blue);
+  border-radius: 8px;
+  width: 200px;
+  height: 200px;
+}
+.contact-info {
+  text-align: left;
+}
+.contact-info p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+.social-links a img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.social-links a img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* Responsive: mobile xếp dọc */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-info {
+    text-align: center;
+  }
+}
+
+
+/* Footer (full width) */
+footer {
+  background: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+}
+footer .footer-logo {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+
+/* trang GOLF */
+
+/* ======================
+   Banner nhỏ (Golf)
+   ====================== */
+.small-banner {
+  position: relative;
+  text-align: center;
+  opacity: .85;
+  color: var(--white);
+}
+.small-banner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.small-banner h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 28px;
+}
+
+/* ======================
+   Golf List Section
+   ====================== */
+.golf-list {
+  padding: 40px 0;
+  text-align: center;
+}
+.golf-list h2 {
+  font-size: 28px;
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+/* Bộ lọc */
+.golf-filter {
+  margin: 20px 0 30px;
+  text-align: center;
+}
+.filter-btn {
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.filter-btn:hover {
+  background: var(--yellow);
+  color: var(--blue);
+}
+.filter-btn.active {
+  background: var(--yellow);
+  color: var(--blue);
+}
+
+/* Danh sách card */
+.golf-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card Golf */
+.golf-card {
+  flex: 0 0 calc(33.33% - 20px);
+  background: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  display: flex;             /* thêm flexbox */
+  flex-direction: column;    /* xếp dọc */
+}
+
+.golf-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.golf-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Nội dung card */
+.golf-content {
+  flex: 1;                          /* giãn ra hết chiều cao còn lại */
+  display: flex;
+  flex-direction: column;           /* xếp dọc nội dung */
+  padding: 15px;
+}
+
+.golf-content .tag {
+  align-self: flex-start;  /* ép tag về bên trái, không bị giãn */
+  display: inline-block;   /* luôn là khối inline */
+  background: var(--yellow);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  flex: 0 0 auto;          /* không cho tag bị giãn theo flex */
+}
+
+.golf-content h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: var(--blue);
+}
+
+.golf-content p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Đẩy nút xuống cuối */
+.btn-detail {
+  margin-top: auto;              /* đẩy xuống cuối card */
+  align-self: flex-start;        /* căn bên trái (có thể đổi thành center nếu muốn) */
+  display: inline-block;         /* chỉ rộng bằng nội dung */
+  min-width: 120px;              /* để các nút có kích thước đều nhau */
+  padding: 8px 16px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-detail:hover {
+  background: var(--yellow);
+  color: var(--blue);
+} 
+
+
+/* ======================
+   Responsive
+   ====================== */
+@media (max-width: 1200px) {
+  .golf-card {
+    flex: 0 0 calc(50% - 20px); /* Tablet: 2 thẻ 1 hàng */
+  }
+}
+@media (max-width: 768px) {
+  .golf-card {
+    flex: 0 0 100%; /* Mobile: 1 thẻ 1 hàng */
+  }
+  .small-banner h1 {
+    font-size: 22px;
+    padding: 8px 15px;
+  }
+}
+
+
+
+
+/*================================
+
+/* Layout chính */
+.detail-container {
+  max-width: 1344px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+/* Gallery */
+.gallery {
+  width: 100%;
+  text-align: center;
+}
+
+/* Ảnh lớn trong gallery */
+.gallery-main {
+  width: 100%;
+  height: 500px;            /* khung cố định 500px desktop */
+  overflow: hidden;
+  border-radius: 8px;
+}
+.gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Thumbnails */
+.gallery-thumbs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.gallery-thumbs img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s, border 0.3s;
+}
+.gallery-thumbs img:hover {
+  transform: scale(1.1);
+  border-color: var(--yellow);
+}
+
+/* ======================
+   Mobile (≤768px)
+   ====================== */
+@media (max-width: 768px) {
+  .gallery-main {
+    height: 300px;   /* mobile khung ảnh thấp hơn */
+  }
+
+  .gallery-thumbs {
+    justify-content: flex-start;  /* xếp từ trái sang phải */
+    overflow-x: auto;             /* cho phép cuộn ngang */
+    scrollbar-width: none;        /* ẩn thanh cuộn Firefox */
+  }
+  .gallery-thumbs::-webkit-scrollbar {
+    display: none;                /* ẩn thanh cuộn Chrome/Safari */
+  }
+  .gallery-thumbs img {
+    flex: 0 0 auto;               /* giữ nguyên kích thước khi scroll */
+  }
+  /* Thumbnail active */
+  .gallery-thumbs img.active {
+    border: 2px solid var(--yellow);
+    transform: scale(1.05);
+  }
+}
+
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+.popup-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90%;
+}
+.popup .close {
+  position: absolute;
+  top: 20px; right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Content layout */
+.detail-content {
+  display: flex;
+  gap: 20px;                /* khoảng cách đều nhau */
+  max-width: 1344px;        /* giới hạn chiều rộng */
+  margin: 0 auto;           /* canh giữa */
+}
+.info-box {
+  flex: 3;        
+  background: var(--white);
+  color: #000;
+  padding: 20px;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+.other-golf {
+  flex: 1;    
+}
+.other-golf h3 {
+  margin-bottom: 10px;
+  color: var(--blue);
+}
+.other-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.other-card {
+  background: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--blue);
+  transition: background 0.3s;
+}
+.other-card:hover {
+  background: var(--yellow);
+  color: var(--blue);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .detail-content {
+    flex-direction: column;
+  }
+}
+
+
+
+.golf-detail-info-box {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+.golf-detail-title {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.golf-detail-subtitle {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.golf-detail-section {
+  margin-bottom: 25px;
+}
+
+.golf-detail-section-title {
+  color: #2980b9;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-left: 4px solid #2980b9;
+  padding-left: 10px;
+}
+
+.golf-detail-time-list {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 0;
+}
+
+.golf-detail-time-list li::before {
+  content: "•";
+  color: #2980b9;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.golf-detail-price {
+  font-weight: bold;
+  color: #27ae60;
+  margin-top: 8px;
+}
+
+.golf-detail-note {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+/*   trang thuê xe du lịch */
+
+/* ============================
+   Car Rental Page Styling
+   ============================ */
+
+/* Banner nhỏ */
+.small-banner {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.small-banner h1 {
+  background: rgba(0,0,0,0.65);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 26px;
+  text-align: center;
+}
+
+/* Pricing Section */
+.car-rental-pricing {
+  margin: 40px auto;
+}
+.car-rental-pricing h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-size: 22px;
+  border-left: 6px solid var(--yellow);
+  padding-left: 10px;
+}
+.car-rental-pricing .desc {
+  margin: 5px 0 15px 0;
+  color: #666;
+  font-style: italic;
+}
+
+/* Pricing table */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  font-size: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #eee;
+  padding: 12px 10px;
+  text-align: center;
+}
+.pricing-table th {
+  background: var(--blue);
+  color: var(--white);
+  font-weight: bold;
+}
+.pricing-table tr:nth-child(even) { background: #fafafa; }
+.pricing-table tr:hover { background: #f5faff; }
+
+/* Responsive tables */
+@media (max-width: 992px) {
+  .pricing-table th, .pricing-table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-table, 
+  .pricing-table thead, 
+  .pricing-table tbody, 
+  .pricing-table th, 
+  .pricing-table td, 
+  .pricing-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .pricing-table thead {
+    display: none; /* ẩn header trên mobile */
+  }
+
+  .pricing-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  .pricing-table td {
+    border: none;
+    text-align: left;
+    padding: 6px 10px;
+    font-size: 14px;
+    position: relative;
+  }
+
+  .pricing-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: var(--blue);
+    display: block;
+    margin-bottom: 4px;
+  }
+}
+
+
+
+
+.car-rental-gallery {
+  margin: 50px auto;
+  overflow: hidden;
+  max-width: var(--max-width);
+}
+
+.marquee-row {
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+}
+
+.marquee-group {
+  display: flex;
+  gap: 30px;
+  padding-right: 30px;
+}
+
+.marquee-group img {
+  width: 300px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Animation hàng trên (sang trái) */
+.marquee-row.left .marquee-track {
+  animation: scroll-left 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Animation hàng dưới (sang phải) */
+.marquee-row.right .marquee-track {
+  animation: scroll-right 25s linear infinite;
+}
+
+@keyframes scroll-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+
+
+/* ============================
+   Villa Page
+   ============================ */
+
+/* Container danh sách villa */
+.villa-list {
+  padding: 40px 20px;
+  max-width: 1344px;
+  margin: 0 auto;
+}
+
+
+.banner .small-banner
+
+/* Bộ lọc */
+.villa-filter {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.villa-filter .filter-btn {
+  margin: 5px;
+  padding: 10px 18px;
+  border: none;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+.villa-filter .filter-btn:hover,
+.villa-filter .filter-btn.active {
+  background: var(--yellow);
+  color: var(--blue);
+}
+
+/* Cards */
+.villa-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.villa-card {
+  flex: 0 0 calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;   /* bố cục theo cột: ảnh trên, nội dung dưới */
+  background: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.villa-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.villa-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Nội dung card */
+.villa-content {
+  flex: 1;                        /* chiếm toàn bộ phần còn lại của card */
+  display: flex;
+  flex-direction: column;         /* sắp xếp dọc */
+  padding: 15px;
+}
+.villa-content .tag {
+  display: inline-block;
+  max-width: fit-content;         /* gọn theo chữ */
+  background: var(--yellow);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.villa-content h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: var(--blue);
+}
+.villa-content p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.5;
+  flex-grow: 1;                    /* đẩy nút xuống đáy */
+}
+.villa-content .btn-detail {
+  display: inline-block;
+  margin-top: auto;                /* luôn nằm cuối card */
+  padding: 8px 12px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+.villa-content .btn-detail:hover {
+  background: var(--yellow);
+  color: var(--blue);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .villa-card {
+    flex: 0 0 calc(50% - 20px); /* Tablet: 2 cột */
+  }
+}
+@media (max-width: 768px) {
+  .villa-card {
+    flex: 0 0 100%; /* Mobile: 1 cột */
+  }
+  .villa-card img {
+    height: 160px;
+  }
+}
+
+
+
+/* ============================
+   Villa Detail
+   ============================ */
+
+.villa-detail-info-box {
+  background: var(--white);
+  color: #222;
+  padding: 25px 30px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  max-width: 900px;
+  margin: 40px auto;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.villa-card img {
+height: 300px;
+}
+.villa-detail-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.villa-detail-address {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.villa-detail-section {
+  margin-bottom: 25px;
+}
+
+.villa-detail-subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.villa-detail-list {
+  list-style: none;
+  padding-left: 0;
+}
+.villa-detail-list li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+.villa-detail-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--yellow);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.villa-detail-note {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-left: 5px solid var(--yellow);
+  border-radius: 6px;
+}
+
+
+.gallery-thumbs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+  padding: 10px 0;
+}
+.gallery-thumbs::-webkit-scrollbar {
+  display: none;
+}
+.gallery-thumbs.dragging {
+  cursor: grabbing;
+}
+.gallery-thumbs img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: transform 0.3s, border 0.3s;
+}
+.gallery-thumbs img:hover {
+  transform: scale(1.1);
+  border-color: var(--yellow);
+}
+
+
+
+
+/* ============================
+   Apartment Page
+   ============================ */
+
+.apartment-list {
+  padding: 40px 20px;
+  max-width: 1344px;
+  margin: 0 auto;
+}
+
+/* Bộ lọc */
+.apartment-filter {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.apartment-filter .filter-btn {
+  margin: 5px;
+  padding: 10px 18px;
+  border: none;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+.apartment-filter .filter-btn:hover,
+.apartment-filter .filter-btn.active {
+  background: var(--yellow);
+  color: var(--blue);
+}
+
+/* Cards */
+.apartment-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.apartment-card {
+  flex: 0 0 calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.apartment-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.apartment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Nội dung */
+.apartment-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.apartment-content .tag {
+  display: inline-block;
+  max-width: fit-content;
+  background: var(--yellow);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.apartment-content h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: var(--blue);
+}
+.apartment-content p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.5;
+  flex-grow: 1; /* đẩy nút xuống cuối */
+}
+.apartment-content .btn-detail {
+  display: inline-block;
+  margin-top: auto;
+  padding: 8px 12px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+.apartment-content .btn-detail:hover {
+  background: var(--yellow);
+  color: var(--blue);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .apartment-card {
+    flex: 0 0 calc(50% - 20px); /* Tablet: 2 cột */
+  }
+}
+@media (max-width: 768px) {
+  .apartment-card {
+    flex: 0 0 100%; /* Mobile: 1 cột */
+  }
+  .apartment-card img {
+    height: 160px;
+  }
+}
+
+
+
+
+
+
+
+/* ============================
+   Apartment Detail Page
+   ============================ */
+
+.apartment-detail-section {
+  max-width: 1344px;
+  margin: 40px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.apartment-detail-section h2 {
+  color: var(--blue);
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.apartment-detail-section p {
+  line-height: 1.6;
+  color: #444;
+  font-size: 15px;
+}
+
+/* Gallery cho mỗi loại căn hộ */
+.apt-gallery {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 10px 0;
+  cursor: grab;
+}
+.apt-gallery::-webkit-scrollbar {
+  display: none;
+}
+.apt-gallery img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid #ddd;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.3s, border 0.3s;
+}
+.apt-gallery img:hover {
+  transform: scale(1.05);
+  border-color: var(--yellow);
+}
+
+/* Tiện ích 5 sao */
+.apartment-detail-section ul {
+  list-style: none;
+  padding: 0;
+}
+.apartment-detail-section ul li {
+  margin: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  font-size: 15px;
+  color: #333;
+}
+.apartment-detail-section ul li::before {
+  content: "✔";
+  color: var(--yellow);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Popup ảnh phóng to */
+#popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+#popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .apt-gallery img {
+    width: 150px;
+    height: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .apartment-detail-section {
+    padding: 20px;
+  }
+  .apt-gallery img {
+    width: 130px;
+    height: 90px;
+  }
+  .apartment-detail-section h2 {
+    font-size: 20px;
+  }
+  .apartment-detail-section p {
+    font-size: 14px;
+  }
+}
+

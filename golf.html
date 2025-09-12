@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sân Golf - XINCHAOHOCHIMINH</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+
+<!-- Menu -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">신짜오 호치민</div>
+      <ul id="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="golf.html">Golf</a></li>
+        <li><a href="apartment.html" class="active">Apartment</a></li>
+        <li><a href="villa.html">Villa</a></li>
+        <li><a href="car-rental.html">Car Rental</a></li>
+        <li><a href="home.html">Other Services</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+  </header>
+
+  <!-- Banner nhỏ -->
+  <section class="banner small-banner">
+    <img src="picter/bg_golf.webp" alt="Sân Golf">
+    <h1>베트남 골프장 ✅</h1>
+  </section>
+
+
+
+<!-- Danh sách địa điểm Golf -->
+<section class="golf-list">
+  <div class="container">
+    <h2>Danh sách sân golf</h2>
+
+    <!-- Bộ lọc -->
+    <div class="golf-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Hồ Chí Minh">Hồ Chí Minh</button>
+      <button class="filter-btn" data-filter="Đồng Nai">Đồng Nai</button>
+      <button class="filter-btn" data-filter="Phan Thiết">Phan Thiết</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="golf-cards">
+
+      <!-- Hồ Chí Minh (6 thẻ) -->
+      <div class="golf-card" data-location="Hồ Chí Minh">
+        <img src="picter/golf_thuduc/thumnail.jpg" alt="Golf HCM 1">
+        <div class="golf-content">
+          <span class="tag">Hồ Chí Minh</span>
+          <h3>투득cc / Thủ Đức CC</h3>
+          <p>베트남 골프 & 컨트리 클럽(Vietnam Golf & Country Club), 일반적으로 **투득CC(Thu Duc CC)**로 알려진 이 골프장은
+            베트남 최초의 36홀 골프장(18홀 × 2코스)으로,
+            총 면적 300헥타르에 달하는 광대한 규모를 자랑합니다.</p>
+          <a href="golf-detail_hcm_1.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+      <div class="golf-card" data-location="Hồ Chí Minh">
+        <img src="picter/tansonnhat/thum.jpg" alt="Golf HCM 2">
+        <div class="golf-content">
+          <span class="tag">Hồ Chí Minh</span>
+          <h3>탄손넛 cc / Tân Sơn Nhất CC</h3>
+          <p>투득CC는 호치민 시내에서 약 20km 거리에 위치한
+            베트남 최초의 36홀 골프장으로,
+            넓은 자연 속에서 **두 개의 18홀 코스(West/East)**를 갖춘
+            프리미엄 골프 리조트입니다.
+            전문적인 코스 설계와 조용한 숲속 분위기,
+            그리고 편리한 접근성 덕분에
+            현지 골퍼와 해외 방문객 모두에게 인기 있는 명소입니다.</p>
+          <a href="golf-detail_hcm_2.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+      <div class="golf-card" data-location="Hồ Chí Minh">
+        <img src="picter/Twin Doves/14441868071371.jpg" alt="Golf HCM 3">
+        <div class="golf-content">
+          <span class="tag">Hồ Chí Minh</span>
+          <h3>트윈도브cc / Twin Doves CC</h3>
+          <p>트윈도브CC는 빈즈엉성(Bình Dương)에 위치한 고급 멤버십 골프장으로,
+            **3개의 9홀 코스(Luna, Stella, Sole)**로 구성된
+            27홀 국제 표준 골프장입니다.
+
+            세련된 클럽하우스, 정교한 코스 설계,
+            그리고 도심에서의 뛰어난 접근성 덕분에
+            비즈니스 라운드와 외국인 골퍼들에게도 매우 인기가 높습니다.</p>
+          <a href="golf-detail_hcm_3.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+      <div class="golf-card" data-location="Hồ Chí Minh">
+        <img src="picter/Vung Tau Paradise/paradise-vung-tau-ho-trong-san.jpg" alt="Golf HCM 4">
+        <div class="golf-content">
+          <span class="tag">Hồ Chí Minh</span>
+          <h3>붕따우 파라다이스cc / Vũng Tàu Paradise</h3>
+          <p>붕따우 파라다이스CC는 바닷가에 위치한 베트남 최초의 링크스 스타일 골프장으로,
+            18홀 코스와 아름다운 해변 경관을 함께 즐길 수 있는
+            붕따우의 대표적인 골프 명소입니다.
+
+            시원한 바닷바람과 여유로운 분위기 속에서
+            자연 그대로의 라운딩을 경험할 수 있는 특별한 장소입니다.</p>
+          <a href="golf-detail_hcm_5.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+      <div class="golf-card" data-location="Hồ Chí Minh">
+        <img src="picter/The Bluffs Grand Ho Tram/2-300-square-meter-multi.jpg" alt="Golf HCM 5">
+        <div class="golf-content">
+          <span class="tag">Hồ Chí Minh</span>
+          <h3>붕따우 더블러스cc / The Bluffs Grand Ho Tram</h3>
+          <p>더블러스CC는 세계적인 골퍼 그렉 노먼(Greg Norman)이 설계한 해안 링크스 스타일 골프장으로,
+            호트람(Ho Tram) 지역의 드라마틱한 지형과 바닷바람을 그대로 살린
+            챌린징한 18홀 코스로 유명합니다.
+
+            베트남 최고의 골프장 중 하나로 평가되며,
+            자연과 어우러진 프리미엄 골프 경험을 제공합니다.</p>
+          <a href="golf-detail_hcm_6.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+      <div class="golf-card" data-location="Hồ Chí Minh">
+        <img src="picter/vinpearl_cuchi/hinh-anh-san-golf-vingroup-cu-chi-2.jpg" alt="Golf HCM 6">
+        <div class="golf-content">
+          <span class="tag">Hồ Chí Minh</span>
+          <h3>빈펄 레만 / Vinpearl Củ Chi</h3>
+          <p>빈펄 레만 골프장은 빈펄 그룹이 운영하는 프리미엄 골프장으로,
+              아름다운 자연 환경과 현대적인 시설을 갖춘 국제 표준 코스입니다.
+
+              쾌적한 라운딩 환경과 세심한 서비스로
+              국내외 골퍼 모두에게 사랑받는 명소입니다.</p>
+          <a href="golf-detail_hcm_4.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+
+      <!-- Đồng Nai (5 thẻ) -->
+      <div class="golf-card" data-location="Đồng Nai">
+        <img src="picter/taelwangJeongsan/thum.jpg" alt="Golf Đồng Nai 1">
+        <div class="golf-content">
+          <span class="tag">Đồng Nai</span>
+          <h3>태광정산cc / Taekwang Jeongsan</h3>
+          <p>태광정산CC는 호치민 인근 동나이강(Dong Nai River) 섬 지역에 위치한 27홀 골프장으로,
+            강과 자연 경관을 활용한 독특한 코스 레이아웃이 특징입니다.
+
+            도심에서 가깝고 경치가 아름다워,
+            편안한 라운딩과 리조트 분위기를 동시에 즐길 수 있는 인기 골프장입니다.</p>
+          <a href="golf-detail_dongnai_1.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+      <div class="golf-card" data-location="Đồng Nai">
+        <img src="picter/longthanh/LTG2014-11-l.jpg" alt="Golf Đồng Nai 2">
+        <div class="golf-content">
+          <span class="tag">Đồng Nai</span>
+          <h3>롱탄cc / Long Thành</h3>
+          <p>롱탄CC는 호치민 시내에서 약 40분 거리에 위치한
+            36홀 규모의 국제 표준 골프장으로,
+            완만한 언덕과 풍부한 자연 경관을 살린 코스가 특징입니다.
+
+            쾌적한 환경과 세심한 관리로
+            베트남에서 가장 인기 있는 골프장 중 하나로 손꼽힙니다.</p>
+          <a href="golf-detail_dongnai_2.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+      <div class="golf-card" data-location="Đồng Nai">
+        <img src="picter/songbe/thumnail.jpg" alt="Golf Đồng Nai 3">
+        <div class="golf-content">
+          <span class="tag">Đồng Nai</span>
+          <h3>Song Be Golf Resort</h3>
+          <p>송베 골프 리조트는 베트남 최초의 국제 표준 27홀 골프장으로,
+            빈즈엉(Bình Dương) 지역에 위치해 있습니다.
+
+            세 개의 9홀 코스(팜, 데저트, 레이크)로 구성되어 있으며,
+            도전적인 레이아웃과 다양한 난이도로 골퍼들에게 큰 인기를 끌고 있습니다.</p>
+          <a href="golf-detail_dongnai_3.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+      <div class="golf-card" data-location="Đồng Nai">
+        <img src="picter/harmony/download.jpg" alt="Golf Đồng Nai 4">
+        <div class="golf-content">
+          <span class="tag">Đồng Nai</span>
+          <h3>하모니cc / Harmony CC</h3>
+          <p>하모니CC는 호치민 인근 빈즈엉(Bình Dương)에 위치한 27홀 국제 표준 골프장으로,
+            전략적인 코스 설계와 현대적인 시설을 갖추고 있습니다.
+
+            도전적인 플레이와 쾌적한 환경을 동시에 즐길 수 있어
+            현지 골퍼와 외국인 골퍼 모두에게 인기 있는 코스입니다.</p>
+          <a href="golf-detail_dongnai_5.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+      <div class="golf-card" data-location="Đồng Nai">
+        <img src="picter/dongnai_golf/thumnail.jpg\" alt="Golf Đồng Nai 5">
+        <div class="golf-content">
+          <span class="tag">Đồng Nai</span>
+          <h3>Dong Nai Golf Resort</h3>
+          <p>동나이 골프 리조트는 호치민에서 약 50km 떨어진 자연 속에 위치한 27홀 골프장으로,
+              호수와 숲을 활용한 아름다운 코스 레이아웃이 특징입니다.
+
+              평온한 분위기와 다양한 난이도로 설계된 코스로
+              편안한 휴식과 라운딩을 동시에 즐길 수 있는 명소입니다.</p>
+          <a href="golf-detail_dongnai_4.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+
+      <!-- Phan Thiết (1 thẻ) -->
+      <div class="golf-card" data-location="Phan Thiết">
+        <img src="picter/Golf Sea Links/san-golf-SeaLink-thumb.jpg" alt="Golf Phan Thiết">
+        <div class="golf-content">
+          <span class="tag">Phan Thiết</span>
+          <h3>Sân Golf Phan Thiết</h3>
+          <p>판티엣에 위치한 씨링크스 골프는
+            바다 전망과 함께 즐기는 베트남 대표 링크스 스타일 골프장입니다.
+            광활한 코스와 시원한 해안 바람 속에서
+            도전적이면서도 특별한 라운딩 경험을 제공합니다.</p>
+          <a href="golf-detail_phanthiet.html" class="btn-detail">자세히 보기</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Liên hệ -->
+  <section class="contact">
+    <div class="container">
+      <h2>저희에게 문의하세요</h2>
+      <div class="contact-container">
+        <div class="qr-code">
+          <img src="picter/QR.png" alt="QR KakaoTalk">
+        </div>
+        <div class="contact-info">
+          <p>KakaoTalk: <strong><a href="http://pf.kakao.com/_FXwxkG/chat">신짜오 호치민</strong></p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="https://youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+            <a href="https://open.kakao.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111496.png" alt="KakaoTalk"></a>
+            <a href="https://x.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">XINCHAOHOCHIMINH</div>
+    <p>© 2025 XINCHAOHOCHIMINH. All rights reserved.</p>
+  </footer>
+
+  <!-- Script menu toggle -->
+  <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+    if (toggleBtn && menu) {
+      toggleBtn.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    }
+  </script>
+<script>
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const golfCards = document.querySelectorAll(".golf-card");
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.getAttribute("data-filter");
+
+      golfCards.forEach(card => {
+        if (filter === "all" || card.getAttribute("data-location") === filter) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

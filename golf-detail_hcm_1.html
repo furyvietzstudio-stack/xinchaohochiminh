@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết Sân Golf</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+
+<!-- Menu -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">신짜오 호치민</div>
+      <ul id="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="golf.html">Golf</a></li>
+        <li><a href="apartment.html" class="active">Apartment</a></li>
+        <li><a href="villa.html">Villa</a></li>
+        <li><a href="car-rental.html">Car Rental</a></li>
+        <li><a href="home.html">Other Services</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+  </header>
+
+
+  <!-- Banner nhỏ -->
+  <section class="small-banner">
+    <img src="picter/bg_golf.webp" alt="Golf Detail">
+    <h1>투득CC</h1>
+  </section>
+
+  <!-- Layout chính -->
+  <section class="golf-detail">
+    <div class="detail-container">
+
+      <!-- Slide ảnh -->
+      <div class="gallery">
+        <div class="gallery-main" id="gallery-main">
+          <img src="picter/golf_thuduc/thumnail.jpg" alt="Ảnh 1" id="main-image">
+        </div>
+        <div class="gallery-thumbs">
+          <img src="picter/golf_thuduc/012.jpg" alt="Ảnh 1" onclick="showImage(this)">
+          <img src="picter/golf_thuduc/120.jpg" alt="Ảnh 2" onclick="showImage(this)">
+          <img src="picter/golf_thuduc/15312.jpg" alt="Ảnh 3" onclick="showImage(this)">
+          <img src="picter/golf_thuduc/210.jpg" alt="Ảnh 4" onclick="showImage(this)">
+          <img src="picter/golf_thuduc/233.jpg" alt="Ảnh 5" onclick="showImage(this)">
+          <img src="picter/golf_thuduc/284.jpg" alt="Ảnh 6" onclick="showImage(this)">
+          <img src="picter/golf_thuduc/332.jpg" alt="Ảnh 7" onclick="showImage(this)">
+          <img src="picter/golf_thuduc/thumnail.jpg" alt="Ảnh 8" onclick="showImage(this)">
+          <img src="picter/golf_thuduc/z6115016914149_0cdda51735b1a6ce172392d0d483dc0e.jpg" alt="Ảnh 9" onclick="showImage(this)">
+        </div>
+      </div>
+
+      <div class="detail-content">
+        <!-- Thông tin (50%) -->
+<div class="golf-detail-info-box">
+  <h2 class="golf-detail-title">⛳ 투득CC / Thủ Đức Country Club 요금 안내</h2>
+
+  <p>
+    호치민 도심에서 가까운 투득CC는<br>
+    베트남 최초의 36홀 챔피언십 골프장으로,<br>
+    아름다운 자연과 세련된 코스 설계가 어우러진 명문 골프 클럽입니다.
+  </p>
+
+  <p>
+    투득CC는 요일과 시간대별로 다양한 요금제를 운영하여<br>
+    비즈니스 라운드, 주말 여가, 새벽 라운딩 등<br>
+    각기 다른 라이프스타일에 맞춘 최적의 선택을 제공합니다.
+  </p>
+
+  <!-- 월요일 -->
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">🗓️ 월요일 (평일)</h3>
+    <p>여유로운 주초 라운딩을 원하는 골퍼를 위한 특별 요금</p>
+    <ul class="golf-detail-time-list">
+      <li><strong>오전:</strong> 05:37 ~ 07:59</li>
+      <li><strong>오후:</strong> 11:00 ~ 13:07 / 15:30 ~ 17:30</li>
+    </ul>
+    <p class="golf-detail-price">➡️ 2,300,000 VND (약 $88)</p>
+  </div>
+
+  <!-- 화요일 ~ 금요일 -->
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">🗓️ 화요일 ~ 금요일 (평일)</h3>
+    <p>업무와 휴식을 조화롭게 즐길 수 있는 이상적인 요일</p>
+    <p>전 시간대 동일 요금 적용</p>
+    <p class="golf-detail-price">➡️ 2,500,000 VND (약 $95)</p>
+  </div>
+
+  <!-- 주말 -->
+  <div class="golf-detail-section">
+    <h3 class="golf-detail-section-title">🗓️ 주말 (토요일 ~ 일요일)</h3>
+    <p>최고의 컨디션과 활기를 만끽할 수 있는 프라임 타임 라운드</p>
+    <ul class="golf-detail-time-list">
+      <li><strong>프리미엄 타임:</strong> 3,600,000 VND (약 $140)</li>
+      <li><strong>스탠다드 타임:</strong> 3,400,000 VND (약 $130)</li>
+      <li><strong>이코노미 타임:</strong> 2,600,000 VND (약 $100)</li>
+    </ul>
+    <p class="golf-detail-note">💡 주말 요금은 시간대 및 예약 조건에 따라 달라질 수 있으므로, 사전 확인을 권장드립니다.</p>
+  </div>
+
+  <p class="golf-detail-note">
+    ✨ 투득CC는 단순한 라운딩을 넘어,<br>
+    골퍼의 하루를 더욱 가치 있고 특별하게 만들어 드립니다.
+  </p>
+</div>
+
+
+
+        <!-- Các sân golf khác (20%) -->
+        <div class="other-golf">
+          <h3>Các sân golf khác</h3>
+          <div class="other-list">
+            <a href="golf-detail.html?id=vungtau" class="other-card">Golf Ho Chi Minh</a>
+            <a href="golf-detail.html?id=binhduong" class="other-card">Golf Phan Thiet</a>
+            <a href="golf-detail.html?id=dongnai" class="other-card">Golf Dong Nai</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup full screen -->
+  <div id="popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img class="popup-content" id="popup-img">
+  </div>
+
+<!-- Liên hệ -->
+  <section class="contact">
+    <div class="container">
+      <h2>저희에게 문의하세요</h2>
+      <div class="contact-container">
+        <div class="qr-code">
+          <img src="picter/QR.png" alt="QR KakaoTalk">
+        </div>
+        <div class="contact-info">
+          <p>KakaoTalk: <strong><a href="http://pf.kakao.com/_FXwxkG/chat">신짜오 호치민</strong></p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="https://youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+            <a href="https://open.kakao.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111496.png" alt="KakaoTalk"></a>
+            <a href="https://x.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">XINCHAOHOCHIMINH</div>
+    <p>© 2025 XINCHAOHOCHIMINH. All rights reserved.</p>
+  </footer>
+
+<script>
+  // ======================
+  // Menu toggle
+  // ======================
+  const toggleBtn = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener("click", () => menu.classList.toggle("active"));
+  }
+
+  // ======================
+  // Gallery logic
+  // ======================
+  let currentIndex = 0;
+  const mainImg = document.getElementById("main-image");
+  const thumbs = document.querySelectorAll(".gallery-thumbs img");
+  let slideInterval;
+
+  // Hiển thị ảnh được chọn
+  function showImage(el) {
+    mainImg.src = el.src;
+    currentIndex = Array.from(thumbs).indexOf(el);
+
+    // reset highlight
+    thumbs.forEach(t => t.classList.remove("active"));
+    el.classList.add("active");
+
+    // Mobile: scroll thumbnail về giữa
+    if (window.innerWidth <= 768) {
+      el.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+  }
+
+  // Auto slide 5s
+  function autoSlide() {
+    slideInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % thumbs.length;
+      const nextThumb = thumbs[currentIndex];
+
+      mainImg.src = nextThumb.src;
+      thumbs.forEach(t => t.classList.remove("active"));
+      nextThumb.classList.add("active");
+
+      if (window.innerWidth <= 768) {
+        nextThumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
+    }, 5000);
+  }
+  autoSlide();
+
+  // Gắn sự kiện click cho từng thumbnail
+  thumbs.forEach(thumb => {
+    thumb.addEventListener("click", () => {
+      clearInterval(slideInterval); // dừng slide tạm khi người dùng click
+      showImage(thumb);
+      autoSlide(); // khởi động lại auto slide
+    });
+  });
+
+  // ======================
+  // Popup
+  // ======================
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popup-img");
+
+  mainImg.onclick = function() {
+    popup.style.display = "block";
+    popupImg.src = this.src;
+  }
+
+  function closePopup() {
+    popup.style.display = "none";
+  }
+
+  // Đóng popup khi click nền đen
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) closePopup();
+  });
+</script>
+
+
+</body>
+</html>
