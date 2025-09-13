@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car Rental - Xin Chào Hồ Chí Minh</title>
+  <title>관광용 차량 렌트하기 / 여행용 차량 대여</title>
   <link rel="stylesheet" href="css/mystyle.css">
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="picter/favicon.webp">
+  <!-- Nếu dùng .ico -->
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
 </head>
 <body>
 
@@ -26,7 +32,7 @@
 
 
   <!-- Banner nhỏ -->
-  <section class="small-banner" style="background-image: url(picter/bg_car.webp);">
+  <section class="small-banner" style="background-image: url(picter/thuexe_bg.jpg);">
     <h1>관광 차량 렌트</h1>
   </section>
 
@@ -114,7 +120,7 @@
     </tbody>
   </table>
 
-  <h2>3️⃣ 맞춤 일정 (요청에 따라 유연하게 조정 가능)</h2>
+  <h2> 3️⃣ 맞춤 일정 (요청에 따라 유연하게 조정 가능)</h2>
   <p class="desc">고객은 원하는 시간에 따라 예약하거나, 편도 또는 왕복의 정해진 노선을 선택하여 예약할 수 있습니다.</p>
   <table class="pricing-table">
     <thead>
@@ -236,6 +242,28 @@
     <div class="footer-logo">XINCHAOHOCHIMINH</div>
     <p>© 2025 XINCHAOHOCHIMINH. All rights reserved.</p>
   </footer>
+
+  <script>
+const toggleBtn = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+// Toggle menu khi bấm ☰
+if (toggleBtn && menu) {
+  toggleBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+}
+
+// Khi click vào 1 link trong menu → auto đóng (chỉ mobile)
+const menuLinks = menu.querySelectorAll("a");
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth <= 768) {
+      menu.classList.remove("active");
+    }
+  });
+});
+</script>
 
 </body>
 </html>

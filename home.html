@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XINCHAOHOCHIMINH</title>
+  <title>신짜오 호치민</title>
   <link rel="stylesheet" href="css/mystyle.css">
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="picter/favicon.webp">
+  <!-- Nếu dùng .ico -->
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
 </head>
 <body>
 
@@ -41,9 +45,9 @@
     </div>
   </section>
 
+
   <!-- Services -->
-  <!-- Services -->
-<section class="services">
+  <section class="services">
   <div class="container">
     <h2 class="home_services_1">저희 서비스 ✅</h2>
     <div class="service-slider" id="service-slider">
@@ -69,7 +73,7 @@
       </a>
     </div>
   </div>
-</section>
+ </section>
 
 
   <section class="about">
@@ -185,6 +189,27 @@
     <p>© 2025 XINCHAOHOCHIMINH. All rights reserved.</p>
   </footer>
 
+<script>
+const toggleBtn = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+// Toggle menu khi bấm ☰
+if (toggleBtn && menu) {
+  toggleBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+}
+
+// Khi click vào 1 link trong menu → auto đóng (chỉ mobile)
+const menuLinks = menu.querySelectorAll("a");
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth <= 768) {
+      menu.classList.remove("active");
+    }
+  });
+});
+</script>
 
  
  
