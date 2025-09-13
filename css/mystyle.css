@@ -130,6 +130,58 @@ body {
 
 
 
+.contact {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: linear-gradient(180deg, #2399f9, #0027a7);
+  border-radius: 15px;
+  padding: 15px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.contact-left img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.contact-right .line1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.contact-right .line2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 4px;
+}
 
 
 
