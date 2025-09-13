@@ -146,7 +146,7 @@ body {
 /* Banner (full width) */
 .banner img {
   width: 100%;
-  height: 500px;      /* Mặc định: desktop */
+  height: 800px;      /* Mặc định: desktop */
   object-fit: cover;
 }
 
